@@ -1,0 +1,2 @@
+ALTER TABLE `images_set_user_stats` RENAME COLUMN "imageStatsId" TO "imagesSetId";--> statement-breakpoint
+CREATE UNIQUE INDEX `images_set_user_stats_imagesSetId_userId_unique` ON `images_set_user_stats` (`imagesSetId`,`userId`);

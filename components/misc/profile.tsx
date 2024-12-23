@@ -1,15 +1,8 @@
+import { User } from '@/db/schema';
 import Image from 'next/image';
 import Link from 'next/link';
 
-export default async function Profile({
-  user,
-}: {
-  user: {
-    email?: null | string;
-    image?: null | string;
-    name?: null | string;
-  };
-}) {
+export default function Profile({ user }: { user: User }) {
   return (
     <div className="flex justify-between">
       <div>

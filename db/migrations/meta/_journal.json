@@ -1,12 +1,61 @@
 {
-  "version": "7",
+  "version": "6",
   "dialect": "sqlite",
   "entries": [
     {
       "idx": 0,
-      "version": "6",
+      "version": "5",
       "when": 1732636668898,
       "tag": "0000_init",
+      "breakpoints": true
+    },
+    {
+      "idx": 1,
+      "version": "5",
+      "when": 1732799009841,
+      "tag": "0001_fix_users_properties_not_null",
+      "breakpoints": true
+    },
+    {
+      "idx": 2,
+      "version": "5",
+      "when": 1733085466947,
+      "tag": "0002_image_stats_tweak",
+      "breakpoints": true
+    },
+    {
+      "idx": 3,
+      "version": "5",
+      "when": 1733098107897,
+      "tag": "0003_image_stats_constraint",
+      "breakpoints": true
+    },
+    {
+      "idx": 4,
+      "version": "5",
+      "when": 1733395521448,
+      "tag": "0004_added_user_role",
+      "breakpoints": true
+    },
+    {
+      "idx": 5,
+      "version": "5",
+      "when": 1734600359813,
+      "tag": "0005_reworked_game_persistance",
+      "breakpoints": true
+    },
+    {
+      "idx": 6,
+      "version": "5",
+      "when": 1734606242052,
+      "tag": "0006_fix_images_set_user_stats_constraint",
+      "breakpoints": true
+    },
+    {
+      "idx": 7,
+      "version": "6",
+      "when": 1734693326059,
+      "tag": "0007_rename_verbose_table",
       "breakpoints": true
     }
   ]

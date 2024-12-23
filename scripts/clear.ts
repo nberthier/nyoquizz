@@ -1,10 +1,10 @@
 // This is an utils script used for dev purposes.
-// Easy way to reset the database by running `bun run clear.ts`
+// Easy way to reset the database by running `bun run scripts/clear.ts`
 
 import { sql } from 'drizzle-orm';
 
 // db.ts
-import { db } from './db';
+import { db } from '../db';
 
 //reset.ts
 async function reset() {

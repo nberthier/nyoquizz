@@ -1,6 +1,5 @@
 import { db } from '@/db';
-import { InsertUser } from '@/db/schema';
-import { users } from '@/db/schema';
+import { InsertUser, users } from '@/db/schema';
 import { eq, sql } from 'drizzle-orm';
 
 export async function deleteUser(id: string) {
@@ -11,6 +10,12 @@ export async function findAllUsers() {
   return await db.query.users.findMany();
 }
 
+export async function findUserByEmail(email: string) {
+  return await db.query.users.findFirst({
+    where: (users) => eq(users.email, email),
+  });
+}
+
 export async function findUserById(id: string) {
   return await db.query.users.findFirst({
     where: (users) => eq(users.id, id),
@@ -18,7 +23,10 @@ export async function findUserById(id: string) {
 }
 
 export async function insertUser(user: InsertUser) {
-  return await db.insert(users).values(user);
+  return await db
+    .insert(users)
+    .values({ ...user, createdAt: sql`NOW()` })
+    .returning();
 }
 
 export async function updateUserAge(id: string, age: number) {
